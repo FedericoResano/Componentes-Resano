@@ -1,0 +1,38 @@
+<div>
+    <h2 class="titulo">{{pageTitle}}</h2>
+</div>
+
+<body>
+
+
+    <div class='card-body'>
+        <div class='row'>
+            <div class='table-responsive'>
+                <table class='table table-striped' *ngIf='productos.length'>
+                    <thead>
+                        <tr>
+                            <th>Código de Producto</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr *ngFor='let producto of productos'>
+                            <td>{{producto.idProducto}}</td>
+                            <td>{{producto.NombreProducto}}</td>
+                            <td>{{producto.precio | currency:'ARS ':'symbol':'1.2-2'}}</td>
+                            <td>{{producto.calificacion}}</td>
+                        </tr>
+
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
